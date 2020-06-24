@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const href = select !== '#' ? select : 'html'
       const link = document.querySelector(href);
       const top = link.getBoundingClientRect().top;
+      console.log(top);
       const offset = document.querySelector('.navbar').offsetHeight;
       const currentTop = window.pageYOffset;
       const result = ((currentTop + top) - (offset + 16));
