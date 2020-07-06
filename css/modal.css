@@ -1,0 +1,44 @@
+#modalBack {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+  display: none;
+}
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 400px;
+  padding: 50px;
+  margin: 250px auto 0;
+  z-index: 2;
+  background: #fff;
+  display: none;
+  border-radius: 2px;
+
+}
+#modal > input {
+  width: 100%;
+}
+.Btn {
+  cursor: pointer;
+  font-weight: bold;
+  width: 30%;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  user-select: none;
+}
+#modal.show, #modalBack.show {
+  display: block;
+}
+.flex {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+}
