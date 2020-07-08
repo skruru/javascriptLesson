@@ -11,10 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const checked = allItemSelect.checked;
     if (checked) {
       selectItem = [];
-      const s = 0;
-      while (s < show.childNodes.length) {
-        show.removeChild(show.childNodes[s]);
-      }
+      show.innerHTML = '';
       for (let i = 0; i < items.length; i++) {
         const span = items[i].nextElementSibling.cloneNode(true);
         items[i].checked = true;
@@ -26,18 +23,13 @@ document.addEventListener('DOMContentLoaded', function () {
         items[i].checked = false;
         selectItem.pop(items[i]);
       }
-      const s = 0;
-      while (s < show.childNodes.length) {
-        show.removeChild(show.childNodes[s]);
-      }
+      show.innerHTML = '';
     }
   });
 
   // 各アイテムをクリックしたときのイベントをセットします
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', () => {
-      const indeterminate = allItemSelect.indeterminate;
-      const checked = allItemSelect.checked;
       const span = items[i].nextElementSibling.cloneNode(true);
       if (items[i].checked === true) {
         allItemSelect.indeterminate = true;
